@@ -24,7 +24,7 @@ public class HomeController : Controller
         Grupo grupo = new Grupo();
         ViewBag.miIntegrante = grupo.GetIntegrante(dni);
         ViewBag.DNI = dni;
-        return infoIntegrante();
+        return View("infoIntegrante");
     }
 
     public IActionResult Privacy()

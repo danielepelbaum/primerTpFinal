@@ -19,11 +19,24 @@ namespace tp_final_bimestre_1.Models
          this.familiares= familiares;
          this.intereses = intereses;
         } 
+        public DateTime GetFecha(){
+            return fechaNacimiento;
+        }
+        public List<string> GetFamiliares(){
+            return familiares;
+        }
+        public List<string> GetIntereses(){
+            return intereses;
+        }
         public string GetNombre(){
             return nombre;
         }
         public string GetFoto(){
             return foto;
+        }
+        public int GetDni()
+        {
+            return dni;
         }
     }
 }

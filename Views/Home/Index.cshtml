@@ -6,11 +6,10 @@
 <img src = "bostero.png" alt="">
 </head>
 <div>
-    @foreach (int clave in ViewBag.grupo.Keys){
+    @foreach (int clave in ViewBag.grupo.Keys)
+    {
         <p>@ViewBag.grupo[clave].GetNombre()</p>
         <img src='img/@ViewBag.grupo[clave].GetFoto()' alt = ""/>
+        <a href=@Url.Action("SelectIntegrante", "Home", new{dni = ViewBag.grupo[clave].GetDni()})>informacion del integrante</a>
     }
-    <a href="theo.cshtml">Información de Theo</a>
-    <a href="dani.cshtml">Información de Dani</a>
 </div>
-

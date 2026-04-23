@@ -1,0 +1,15 @@
+<p>Nombre: @ViewBag.miIntegrante.GetNombre()</p>
+<p>DNI: @ViewBag.miIntegrante.GetDni()</p>
+<p>Fecha de nacimiento: @ViewBag.miIntegrante.GetFecha()</p>
+<p>Familiares:</p>
+@foreach(string item in ViewBag.miIntegrante.GetFamiliares()){
+    <p>@item</p>
+}
+<p>Intereses:</p>
+@foreach(string item in ViewBag.miIntegrante.GetIntereses()){
+    <p>@item</p>
+}
+
+<div>
+    <a href = @Url.Action("Index", "Home")>Volver</a>
+<div>
